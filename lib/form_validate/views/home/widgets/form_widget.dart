@@ -25,24 +25,20 @@ class _FormWidgetState extends State<FormWidget> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    /*_firstNameFocus.addListener(() {
+    _firstNameFocus.addListener(() {
       if (_firstNameFocus.hasFocus) {
         context.read<FormValidateBloc>().add(FirstNameUnfocused());
+        //FocusScope.of(context).requestFocus(_lastNameFocus);
       }
-    });*/
-
-    /* _emailFocus.addListener(() {
+      if (_lastNameFocus.hasFocus) {
+        context.read<FormValidateBloc>().add(LastNameUnfocused());
+        //FocusScope.of(context).requestFocus(_emailFocus);
+      }
       if (_emailFocus.hasFocus) {
         context.read<FormValidateBloc>().add(EmailUnfocused());
-        //FocusScope.of(context).requestFocus(_pasFocus);
+        //FocusScope.of(context).requestFocus(_firstNameFocus);
       }
-
-      _passFocus.addListener(() {
-        if (_passFocus.hasFocus) {
-          context.read<FormValidateBloc>().add(PasswordUnfocused());
-        }
-      });
-    });*/
+    });
   }
 
   @override
